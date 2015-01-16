@@ -35,14 +35,14 @@ document.addEventListener("click", changeClass);
 // 4. change the image to be the last clicked food item.
 function changeImage() {
 	if ("LI" == event.target.tagName){
-		var image = event.target.innerHTML;
-		var src = document.getElementsByTagName("img");
+		var imageName = event.target.innerHTML;
+		var pic = document.getElementsByTagName("img");
+		var picPath = "images/" + imageName + ".jpeg";
+		pic.src = picPath;
 
-		// TODO mySrc isn't putting out the path to images
-		// src = "images/" + image + ".jpeg";
-
-		console.log(image);
-		console.log(src);
+		console.log(pic);
+		console.log(imageName);
+		console.log(pic.src);
 	}
 }
 
