@@ -7,13 +7,10 @@
 function main() {
 	changeTitle();
 	colorYellow();
-
 }
 
 // 1. change the greeting from "Hello, World!" to "Hello, Planet Earth!".
 function changeTitle() {
-//  var Title = document.getElementById("greeting");
-//  Title.innerHTML = "My hello";
   document.getElementById("greeting").innerHTML = "My hello";
 }
 
@@ -26,7 +23,6 @@ function colorYellow () {
 }
 
 // 3. add the class of selected to an <li> when it is clicked.
-
 function changeClass(){
 	if ("LI" == event.target.tagName){
 		event.target.className += "selected";
@@ -37,7 +33,20 @@ document.addEventListener("click", changeClass);
 
 
 // 4. change the image to be the last clicked food item.
+function changeImage() {
+	if ("LI" == event.target.tagName){
+		var image = event.target.innerHTML;
+		var src = document.getElementsByTagName("img");
 
+		// TODO mySrc isn't putting out the path to images
+		// src = "images/" + image + ".jpeg";
+
+		console.log(image);
+		console.log(src);
+	}
+}
+
+document.addEventListener("click", changeImage);
 
 // 5. clicking the reset button should remove the selected class from each 
 //    <li> and change the image to panic.jpeg.
