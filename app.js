@@ -11,7 +11,7 @@ function main() {
 
 // 1. change the greeting from "Hello, World!" to "Hello, Planet Earth!".
 function changeTitle() {
-  document.getElementById("greeting").innerHTML = "My hello";
+  document.getElementById("greeting").innerHTML = "Hello, Planet Earth";
 }
 
 // 2. set the backgroundColor of each <li> to yellow.
@@ -34,16 +34,9 @@ document.addEventListener("click", changeClass);
 
 // 4. change the image to be the last clicked food item.
 function changeImage() {
-	if ("LI" == event.target.tagName){
 		var imageName = event.target.innerHTML;
-		var pic = document.getElementsByTagName("img");
-		var picPath = "images/" + imageName + ".jpeg";
-		pic.src = picPath;
-
-		console.log(pic);
-		console.log(imageName);
-		console.log(pic.src);
-	}
+		var picPath = "./images/" + imageName + ".jpeg";
+		document.querySelector("img").setAttribute("src", picPath);
 }
 
 document.addEventListener("click", changeImage);
