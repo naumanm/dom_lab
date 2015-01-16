@@ -2,6 +2,9 @@
 
 // michael nauman
 
+// wait for DOM to load then fire off main
+window.onload = main;
+
 function main() {
   changeTitle();
   colorYellow();
@@ -47,8 +50,3 @@ function myReset () {
 
 // TODO: remove the strike through for all the LI's
 }
-
-
-
-// when the DOM is loaded, call
-window.onload = main;
