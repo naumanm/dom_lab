@@ -45,5 +45,21 @@ document.addEventListener("click", changeImage);
 //    <li> and change the image to panic.jpeg.
 
 
+// TODO: this should be element specific not working off of the document
+document.addEventListener("click", reset);
+
+function reset () {
+
+	var reset = document.getElementById("reset");
+	console.log("push buttons");
+	document.querySel
+
+	ector("img").setAttribute("src", "./images/panic.jpeg");
+
+}
+
+
+
+
 // when the DOM is loaded, call
 window.onload = main;
