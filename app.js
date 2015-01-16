@@ -7,6 +7,12 @@
 function main() {
 	changeTitle();
 	colorYellow();
+
+	// initialize all Event Listeners
+    document.getElementById("essentials").addEventListener("click", changeClass);
+	document.querySelector("img").addEventListener("click", changeImage);
+	document.getElementById("reset").addEventListener("click", myReset);
+
 }
 
 // 1. change the greeting from "Hello, World!" to "Hello, Planet Earth!".
@@ -29,9 +35,6 @@ function changeClass(){
 	}
 }
 
-document.addEventListener("click", changeClass);
-
-
 // 4. change the image to be the last clicked food item.
 function changeImage() {
 		var imageName = event.target.innerHTML;
@@ -39,25 +42,14 @@ function changeImage() {
 		document.querySelector("img").setAttribute("src", picPath);
 }
 
-document.addEventListener("click", changeImage);
-
 // 5. clicking the reset button should remove the selected class from each 
 //    <li> and change the image to panic.jpeg.
-
-
-// TODO: this should be element specific not working off of the document
-document.addEventListener("click", reset);
-
-function reset () {
-
+function myReset () {
 	var reset = document.getElementById("reset");
 	console.log("push buttons");
-	document.querySel
-
-	ector("img").setAttribute("src", "./images/panic.jpeg");
+	document.querySelector("img").setAttribute("src", "./images/panic.jpeg");
 
 }
-
 
 
 
