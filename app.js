@@ -1,3 +1,8 @@
+// DOM Lab, January 15th 2015
+
+// michael nauman
+
+
 // Your code here
 function main() {
 	changeTitle();
@@ -7,16 +12,16 @@ function main() {
 
 // 1. change the greeting from "Hello, World!" to "Hello, Planet Earth!".
 function changeTitle() {
-  var Title = document.getElementById("greeting");
-  Title.innerHTML = "My hello";
+//  var Title = document.getElementById("greeting");
+//  Title.innerHTML = "My hello";
+  document.getElementById("greeting").innerHTML = "My hello";
 }
 
 // 2. set the backgroundColor of each <li> to yellow.
 function colorYellow () {
   var liS = document.getElementsByTagName("li");  
   for(var i = 0; i < liS.length; i++) {
-  	var liSItem = liS[i];
-    liSItem.style.background = "yellow";	
+    liS[i].style.background = "yellow";	
   }
 }
 
